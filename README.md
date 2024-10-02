@@ -19,7 +19,7 @@ users should be able to:
 
 ## Hosted on github domain
 
-- check out live site here [shoe-ecom]()
+- check out live site here [buy_shoe]()
 
 ## My process
 
