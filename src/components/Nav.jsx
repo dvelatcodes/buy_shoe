@@ -17,8 +17,8 @@ const Nav = () => {
           {constants.map((data, i)=> <a href='#' key={i}>{data}</a>)}
         </section>
         <section className='flex items-center'>
-          <img src="/images/icon-cart.svg" alt="cart image" />
-          <img src="/images/image-avatar.png" alt="profile image" className='w-[60px] h-[50px] rounded'/>
+          <img src="/images/icon-cart.svg" alt="cart" className='mr-12'/>
+          <img src="/images/image-avatar.png" alt="profile" className='w-[65px] h-[60px]'/>
         </section>
       </nav>
     </header>
