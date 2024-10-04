@@ -1,8 +1,27 @@
-import React from 'react'
+import React from 'react';
+
+const constants = [
+  "Collections",
+  "Men",
+  "Women",
+  "About",
+  "Contact"
+]
 
 const Nav = () => {
   return (
-    <div className='text-3xl'>Nav</div>
+    <header>
+      <nav className='w-[80vw] m-auto h-[10vh] flex justify-center items-center gap-20'>
+        <img src="/images/logo.svg" alt="shoe logo" className='w-[200px] h-[30px]'/>
+        <section className='h-fit w-[30vw] flex gap-12'>
+          {constants.map((data, i)=> <a href='#' key={i}>{data}</a>)}
+        </section>
+        <section className='flex items-center'>
+          <img src="/images/icon-cart.svg" alt="cart image" />
+          <img src="/images/image-avatar.png" alt="profile image" className='w-[60px] h-[50px] rounded'/>
+        </section>
+      </nav>
+    </header>
   )
 }
 
