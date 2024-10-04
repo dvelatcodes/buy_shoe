@@ -23,7 +23,7 @@ const Nav = () => {
           <img
             src="/images/image-avatar.png"
             alt="profile"
-            className="w-[65px] h-[60px]"
+            className="w-[65px] h-[60px] cursor-pointer profile"
           />
         </section>
       </nav>
