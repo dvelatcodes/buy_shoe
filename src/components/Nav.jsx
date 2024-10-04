@@ -11,9 +11,9 @@ const constants = [
 const Nav = () => {
   return (
     <header>
-      <nav className='w-[80vw] m-auto h-[10vh] flex justify-center items-center gap-20'>
+      <nav className='w-[80vw] m-auto h-[10vh] flex justify-between items-center'>
         <img src="/images/logo.svg" alt="shoe logo" className='w-[200px] h-[30px]'/>
-        <section className='h-fit w-[30vw] flex gap-12'>
+        <section className='h-full w-[50vw] flex gap-12 items-center'>
           {constants.map((data, i)=> <a href='#' key={i}>{data}</a>)}
         </section>
         <section className='flex items-center'>
