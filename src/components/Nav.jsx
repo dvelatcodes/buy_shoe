@@ -16,11 +16,11 @@ const Nav = () => {
   return (
     <header>
       <nav className="w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-between items-center border-b relative">
-        <img src="/images/icon-menu.svg" alt="menu icon" className="sm:hidden w-[50] h-[50]" onClick={changeHam}/>
+        <img src="/images/icon-menu.svg" alt="menu icon" className="sm:hidden w-[50] h-[50] cursor-pointer" onClick={changeHam}/>
 
         <h1 className="text-2xl sm:text-4xl  font-semibold">sneakers</h1>
 
-        <section className={`${attributes.light === "light"? "bg-white" : "bg-black"} sm:bg-transparent h-screen sm:h-full w-[60%] sm:w-[50vw] flex gap-8 sm:gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40 pl-8 sm:pl-0 pt-6 sm:pt-0`}>
+        <section className={`${attributes.light === "light"? "bg-white" : "bg-black"} ${showHam? "hidden" : "flex"} sm:bg-transparent h-screen sm:h-full w-[60%] sm:w-[50vw] flex gap-8 sm:gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40 pl-8 sm:pl-0 pt-6 sm:pt-0`}>
 
           <img src="/images/icon-close.svg" alt="close icon" className="sm:hidden w-[20px] h-[20px] cursor-pointer mb-5" onClick={changeHam}/>
           {constants.map((data, i) => (
