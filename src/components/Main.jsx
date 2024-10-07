@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <main className="relative h-fit w-screen">
       <div
-        className="mode w-fit h-fit cursor-pointer absolute right-28 top-16 z-50"
+        className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
         onClick={changeMode}
       >
         {attributes.light === "light" ? (
