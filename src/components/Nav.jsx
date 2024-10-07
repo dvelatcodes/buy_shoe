@@ -10,14 +10,14 @@ const Nav = () => {
 
         <h1 className="text-2xl sm:text-4xl  font-semibold">sneakers</h1>
 
-        <section className="bg-pink-400 sm:bg-transparent h-screen sm:h-full w-screen sm:w-[50vw] flex gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40">
+        <section className={`bg-pink-400 sm:bg-transparent h-screen sm:h-full w-screen sm:w-[50vw] flex gap-8 sm:gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40 pl-8 sm:pl-0 pt-6 sm:pt-0`}>
 
-          <img src="/images/icon-close.svg" alt="close icon" className="sm:hidden w-[20px] h-[20px] cursor-pointer"/>
+          <img src="/images/icon-close.svg" alt="close icon" className="sm:hidden w-[20px] h-[20px] cursor-pointer mb-5"/>
           {constants.map((data, i) => (
             <a
               href="#"
               key={i}
-              className="sm:h-full font-light hover:border-b-4 flex sm:items-center"
+              className="w-fit sm:h-full font-bold sm:font-light hover:border-b-4 flex sm:items-center"
             >
               {data}
             </a>
