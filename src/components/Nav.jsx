@@ -5,15 +5,20 @@ const constants = ["Collections", "Men", "Women", "About", "Contact"];
 const Nav = () => {
   return (
     <header>
-      <nav className="w-[80vw] m-auto h-[13vh] flex justify-between items-center border-b">
-        <img
-          src="/images/logo.svg"
-          alt="shoe logo"
-          className="w-[200px] h-[30px]"
-        />
-        <section className="h-full w-[50vw] flex gap-12">
+      <nav className="w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-between items-center border-b relative">
+        <img src="/images/icon-menu.svg" alt="menu icon" className="sm:hidden w-[50] h-[50]"/>
+
+        <h1 className="text-2xl sm:text-4xl  font-semibold">sneakers</h1>
+
+        <section className="bg-pink-400 sm:bg-transparent h-screen sm:h-full w-screen sm:w-[50vw] flex gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40">
+
+          <img src="/images/icon-close.svg" alt="close icon" className="sm:hidden w-[20px] h-[20px] cursor-pointer"/>
           {constants.map((data, i) => (
-            <a href="#" key={i} className="h-full font-light hover:border-b-4 flex items-center">
+            <a
+              href="#"
+              key={i}
+              className="sm:h-full font-light hover:border-b-4 flex sm:items-center"
+            >
               {data}
             </a>
           ))}

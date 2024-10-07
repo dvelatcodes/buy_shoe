@@ -3,7 +3,7 @@ import { useContext, createContext, useState } from "react";
 const stateContext = createContext();
 
 const initialState = {
-    light : true,
+    light : "light",
     showCart : false
 }
 
@@ -15,7 +15,7 @@ export const ContextProvider = ({children}) => {
     }
 
     const changeMode = ()=>{
-        setAttributes({...attributes, light : true? false : true});
+        setAttributes({...attributes, light : attributes.light === "light"? "dark" : "light"});
     }
 
     return <stateContext.Provider value={{attributes, setAttributes, changeMode, showCart}}>
