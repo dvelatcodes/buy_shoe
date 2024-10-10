@@ -20,24 +20,25 @@ const Nav = () => {
       }`}
     >
       <nav
-        className={`w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-center sm:justify-between items-center gap-4 sm:gap-0 border-b ${
+        className={`w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-around sm:justify-between items-center gap-4 sm:gap-0 border-b ${
           attributes.light === "light" ? "border-slate-300" : "border-white"
-        } relative pl-4 sm:pl-0 pr-4 sm:pr-0`}
+        } relative`}
       >
-        <img
-          src="/images/icon-menu.svg"
-          alt="menu icon"
-          className="sm:hidden w-[8vw] h-[3vh] cursor-pointer"
-          onClick={changeHam}
-        />
-
-        <h1
-          className={`${
-            attributes.light === "light" ? "text-black" : "text-white"
-          } text-3xl sm:text-4xl  font-semibold mr-28 sm:mr-0 logo`}
-        >
-          sneakers
-        </h1>
+        <section className="flex items-center gap-3">
+          <img
+            src="/images/icon-menu.svg"
+            alt="menu icon"
+            className="sm:hidden w-[6vw] h-[2vh] cursor-pointer"
+            onClick={changeHam}
+          />
+          <h1
+            className={`${
+              attributes.light === "light" ? "text-black" : "text-white"
+            } text-3xl sm:text-4xl  font-semibold logo`}
+          >
+            sneakers
+          </h1>
+        </section>
 
         <section
           className={`${
@@ -69,7 +70,7 @@ const Nav = () => {
           <img
             src="/images/image-avatar.png"
             alt="profile"
-            className="w-[50px] sm:w-[65px] h-[50px] sm:h-[60px] cursor-pointer profile"
+            className="w-[40px] sm:w-[65px] h-[40px] sm:h-[60px] cursor-pointer profile"
           />
         </section>
         <div
