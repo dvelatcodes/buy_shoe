@@ -20,21 +20,21 @@ const Nav = () => {
       }`}
     >
       <nav
-        className={`w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-center sm:justify-between items-center border-b ${
+        className={`w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-center sm:justify-between items-center gap-4 sm:gap-0 border-b ${
           attributes.light === "light" ? "border-slate-300" : "border-white"
-        } relative`}
+        } relative pl-4 sm:pl-0 pr-4 sm:pr-0`}
       >
         <img
           src="/images/icon-menu.svg"
           alt="menu icon"
-          className="sm:hidden w-[50] h-[50] cursor-pointer"
+          className="sm:hidden w-[8vw] h-[3vh] cursor-pointer"
           onClick={changeHam}
         />
 
         <h1
           className={`${
             attributes.light === "light" ? "text-black" : "text-white"
-          } text-2xl sm:text-4xl  font-semibold`}
+          } text-3xl sm:text-4xl  font-semibold mr-28 sm:mr-0 logo`}
         >
           sneakers
         </h1>
@@ -65,7 +65,7 @@ const Nav = () => {
           ))}
         </section>
         <section className="flex items-center">
-          <IoCartOutline className={`mr-8 sm:mr-12 text-4xl ${attributes.light === "light" ? "text-black" : "text-white"}`} />
+          <IoCartOutline className={`mr-4 sm:mr-12 text-4xl ${attributes.light === "light" ? "text-black" : "text-white"}`} />
           <img
             src="/images/image-avatar.png"
             alt="profile"
