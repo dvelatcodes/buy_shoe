@@ -86,7 +86,9 @@ const Main = () => {
         <section>
           <div>
             <button></button>
-            <span>{numOfItemsSelected}</span>
+            <span className={`mr-4 sm:mr-12 text-4xl ${
+              attributes.light === "light" ? "text-black" : "text-white"
+            }`}>{numOfItemsSelected}</span>
             <button></button>
           </div>
           <button
