@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillSun, AiOutlineSun } from "react-icons/ai";
 import { useStateContext } from "../utils/ContextProvider";
+import { IoCartOutline } from "react-icons/io5";
 // import { products } from '../utils/constant';
 const Main = () => {
   const { changeMode, attributes } = useStateContext();
+
+  const [numOfItemsSelected, setNumOfItemsSelected] = useState(1);
   return (
     <main
       className={`${
@@ -25,7 +28,10 @@ const Main = () => {
         <span
           className="uppercase font-semibold"
           style={{
-            color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "hsl(0, 0%, 93.72549019607843%)",
+            color:
+              attributes.light === "light"
+                ? "hsl(219, 9%, 45%)"
+                : "hsl(0, 0%, 93.72549019607843%)",
           }}
         >
           Sneaker Company
@@ -68,13 +74,34 @@ const Main = () => {
           <h4
             style={{
               color:
-                attributes.light === "light" ? "hsl(219, 9%, 45%)" : "hsl(0, 0%, 93.72549019607843%)",
+                attributes.light === "light"
+                  ? "hsl(219, 9%, 45%)"
+                  : "hsl(0, 0%, 93.72549019607843%)",
             }}
             className="font-semibold line-through sm:mt-2"
           >
             $250.00
           </h4>
         </div>
+        <section>
+          <div>
+            <button></button>
+            <span>{numOfItemsSelected}</span>
+            <button></button>
+          </div>
+          <button
+            className={`mr-4 sm:mr-12 text-4xl ${
+              attributes.light === "light" ? "text-black" : "text-white"
+            }`}
+          >
+            <IoCartOutline
+              className={`mr-4 sm:mr-12 text-4xl ${
+                attributes.light === "light" ? "text-black" : "text-white"
+              }`}
+            />
+            Add to cart
+          </button>
+        </section>
       </section>
     </main>
   );
