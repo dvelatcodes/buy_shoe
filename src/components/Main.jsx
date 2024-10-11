@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { AiFillSun, AiOutlineSun } from "react-icons/ai";
 import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
+import { GoPlus } from "react-icons/go";
+import { FiMinus } from "react-icons/fi";
 // import { products } from '../utils/constant';
 const Main = () => {
   const { changeMode, attributes } = useStateContext();
@@ -83,23 +85,34 @@ const Main = () => {
             $250.00
           </h4>
         </div>
-        <section>
-          <div>
-            <button></button>
-            <span className={`mr-4 sm:mr-12 text-4xl ${
-              attributes.light === "light" ? "text-black" : "text-white"
-            }`}>{numOfItemsSelected}</span>
-            <button></button>
-          </div>
-          <button
-            className={`mr-4 sm:mr-12 text-4xl ${
-              attributes.light === "light" ? "text-black" : "text-white"
-            }`}
+        <section className="flex flex-col sm:flex-row gap-5">
+          <div
+            className="w-[90vw] sm:w-[8vw] flex items-center justify-around rounded-lg"
+            style={{ backgroundColor: "hsl(220, 14%, 75%)" }}
           >
-            <IoCartOutline
-              className={`mr-4 sm:mr-12 text-4xl ${
+            <FiMinus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
+            <span
+              className={`font-semibold ${
                 attributes.light === "light" ? "text-black" : "text-white"
               }`}
+              style={{ fontSize: "1rem" }}
+            >
+              {numOfItemsSelected}
+            </span>
+            <GoPlus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
+          </div>
+          <button
+            className={`buy w-[90vw] sm:w-[20vw] h-[7vh] text-xl flex justify-center items-center gap-3 rounded-lg font-semibold ${
+              attributes.light === "light" ? "text-black" : "text-white"
+            }`}
+            style={{
+              fontSize: "1.1rem",
+            }}
+          >
+            <IoCartOutline
+              className={`text-2xl ${
+                attributes.light === "light" ? "text-black" : "text-white"
+              } cart`}
             />
             Add to cart
           </button>

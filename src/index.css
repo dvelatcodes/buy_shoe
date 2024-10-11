@@ -23,3 +23,17 @@ a:hover  {
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
 }
+
+.buy {
+    background-color: hsl(26, 100%, 55%);
+}
+
+.buy:hover {
+    background-color: hsl(25, 100%, 94%);
+    color: black;
+}
+
+.buy:hover .cart {
+    color: black;
+}
+
