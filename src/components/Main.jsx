@@ -47,7 +47,7 @@ const Main = () => {
           the weather can offer.
         </p>
         <div className="flex justify-between sm:block">
-          <div className="flex">
+          <div className="flex gap-4">
             <h3
               className={`${
                 attributes.light === "light" ? "text-black" : "text-white"
@@ -68,8 +68,9 @@ const Main = () => {
           <h4
             style={{
               color:
-                attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
+                attributes.light === "light" ? "hsl(219, 9%, 45%)" : "hsl(0, 0%, 93.72549019607843%)",
             }}
+            className="font-semibold line-through sm:mt-2"
           >
             $250.00
           </h4>
