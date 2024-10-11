@@ -21,7 +21,7 @@ const Main = () => {
         )}
       </div>
       <section></section>
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-6 pl-6">
         <span
           className="uppercase font-semibold"
           style={{
@@ -37,25 +37,42 @@ const Main = () => {
         >
           Fall Limited Edition <br /> Sneakers
         </h1>
-        <p style={{
+        <p
+          style={{
             color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
-          }}>
+          }}
+        >
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they'll withstand everything
           the weather can offer.
         </p>
-        <div>
-          <div>
-            <h3 className={`${
-            attributes.light === "light" ? "text-black" : "text-white"
-          } text-2xl sm:text-2xl  font-medium`}>$125.00</h3>
-            <span className={`${
-            attributes.light === "light" ? "text-black" : "text-white"
-          }  font-medium`}>50%</span>
+        <div className="flex justify-between sm:block">
+          <div className="flex">
+            <h3
+              className={`${
+                attributes.light === "light" ? "text-black" : "text-white"
+              } text-2xl sm:text-3xl  font-semibold`}
+            >
+              $125.00
+            </h3>
+            <span
+              className={`${
+                attributes.light === "light" ? "text-white" : "text-black"
+              }  font-bold ${
+                attributes.light === "light" ? "bg-black" : "bg-white"
+              } flex items-center pr-3 pl-3 rounded`}
+            >
+              50%
+            </span>
           </div>
-          <h4 style={{
-            color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
-          }}>$250.00</h4>
+          <h4
+            style={{
+              color:
+                attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
+            }}
+          >
+            $250.00
+          </h4>
         </div>
       </section>
     </main>
