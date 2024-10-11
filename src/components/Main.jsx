@@ -87,7 +87,7 @@ const Main = () => {
         </div>
         <section className="flex flex-col sm:flex-row gap-5">
           <div
-            className="w-[90vw] sm:w-[8vw] flex items-center justify-around rounded-lg"
+            className="w-[90vw] sm:w-[8vw] h-[7vh] flex items-center justify-around rounded-lg"
             style={{ backgroundColor: "hsl(220, 14%, 75%)" }}
           >
             <FiMinus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
