@@ -21,11 +21,11 @@ const Main = () => {
         )}
       </div>
       <section></section>
-      <section className="flex flex-col gap-6 pl-6">
+      <section className="flex flex-col gap-6 pl-6 pr-6">
         <span
           className="uppercase font-semibold"
           style={{
-            color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
+            color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "hsl(0, 0%, 93.72549019607843%)",
           }}
         >
           Sneaker Company
