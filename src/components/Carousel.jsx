@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {products} from '../utils/constant';
+
 
 const Carousel = () => {
   return (
-    <div>Carousel</div>
+    <div>
+        <div>
+            <img src={products[0].name} alt="" />
+        </div>
+        <div></div>
+    </div>
   )
 }
 

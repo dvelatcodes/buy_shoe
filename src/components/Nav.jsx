@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
+import profile from '../images/image-avatar.png';
 
 const constants = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -68,7 +69,7 @@ const Nav = () => {
         <section className="flex items-center">
           <IoCartOutline className={`mr-4 sm:mr-12 text-4xl ${attributes.light === "light" ? "text-black" : "text-white"}`} />
           <img
-            src="/images/image-avatar.png"
+            src={profile}
             alt="profile"
             className="w-[40px] sm:w-[65px] h-[40px] sm:h-[60px] cursor-pointer profile"
           />

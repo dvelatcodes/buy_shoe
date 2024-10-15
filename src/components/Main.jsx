@@ -4,6 +4,7 @@ import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
+import Carousel from "./Carousel";
 // import { products } from '../utils/constant';
 const Main = () => {
   const { changeMode, attributes } = useStateContext();
@@ -25,7 +26,7 @@ const Main = () => {
           <AiOutlineSun className="text-3xl text-white" />
         )}
       </div>
-      <section></section>
+      <Carousel/>
       <section className="flex flex-col gap-6 pl-6 pr-6">
         <span
           className="uppercase font-semibold"
