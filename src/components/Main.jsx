@@ -14,7 +14,7 @@ const Main = () => {
     <main
       className={`${
         attributes.light === "light" ? "bg-white" : "bg-black"
-      } relative h-fit w-screen pt-8 pb-8 flex flex-col sm:flex-row items-center justify-center sm:justify-around`}
+      } relative h-fit w-screen pt-8 pb-8 flex flex-col sm:flex-row items-center justify-center sm:justify-center`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
@@ -27,7 +27,7 @@ const Main = () => {
         )}
       </div>
       <Carousel/>
-      <section className="flex flex-col gap-6 pl-6 pr-6">
+      <section className="w-screen sm:w-[40vw] flex flex-col gap-6 pl-6 pr-6">
         <span
           className="uppercase font-semibold"
           style={{
