@@ -13,16 +13,17 @@ const Nav = () => {
   };
 
   const { attributes } = useStateContext();
+  const { light } = attributes;
 
   return (
     <header
       className={`w-screen ${
-        attributes.light === "light" ? "bg-white" : "bg-black"
+        light === "light" ? "bg-white" : "bg-black"
       }`}
     >
       <nav
         className={`w-screen sm:w-[80vw] m-auto h-[13vh] flex justify-around sm:justify-between items-center gap-4 sm:gap-0 border-b ${
-          attributes.light === "light" ? "border-slate-300" : "border-white"
+          light === "light" ? "border-slate-300" : "border-white"
         } relative`}
       >
         <section className="flex items-center gap-3">
@@ -34,7 +35,7 @@ const Nav = () => {
           />
           <h1
             className={`${
-              attributes.light === "light" ? "text-black" : "text-white"
+              light === "light" ? "text-black" : "text-white"
             } text-3xl sm:text-4xl  font-semibold logo`}
           >
             sneakers
@@ -43,7 +44,7 @@ const Nav = () => {
 
         <section
           className={`${
-            attributes.light === "light" ? "bg-white" : "bg-black"
+            light === "light" ? "bg-white" : "bg-black"
           } ${
             showHam === false ? "hidden" : "flex"
           } h-screen sm:h-full w-[60%] sm:w-[50vw] sm:flex gap-8 sm:gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40 pl-8 sm:pl-0 pt-6 sm:pt-0`}
@@ -59,7 +60,7 @@ const Nav = () => {
               href="#"
               key={i}
               className={`${
-                attributes.light === "light" ? "text-black" : "text-white"
+                light === "light" ? "text-black" : "text-white"
               } w-fit sm:h-full font-bold sm:font-light hover:border-b-4 flex sm:items-center`}
             >
               {data}
@@ -67,7 +68,7 @@ const Nav = () => {
           ))}
         </section>
         <section className="flex items-center">
-          <IoCartOutline className={`mr-4 sm:mr-12 text-4xl ${attributes.light === "light" ? "text-black" : "text-white"}`} />
+          <IoCartOutline className={`mr-4 sm:mr-12 text-4xl ${light === "light" ? "text-black" : "text-white"}`} />
           <img
             src={profile}
             alt="profile"

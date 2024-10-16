@@ -13,14 +13,14 @@ const Main = () => {
   return (
     <main
       className={`${
-        attributes.light === "light" ? "bg-white" : "bg-black"
+        attributes?.light === "light" ? "bg-white" : "bg-black"
       } relative h-fit sm:h-[87vh] w-screen pt-8 sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
         onClick={changeMode}
       >
-        {attributes.light === "light" ? (
+        {attributes?.light === "light" ? (
           <AiFillSun className="text-3xl" />
         ) : (
           <AiOutlineSun className="text-3xl text-white" />
@@ -32,7 +32,7 @@ const Main = () => {
           className="uppercase font-semibold"
           style={{
             color:
-              attributes.light === "light"
+              attributes?.light === "light"
                 ? "hsl(219, 9%, 45%)"
                 : "hsl(0, 0%, 93.72549019607843%)",
           }}
@@ -41,14 +41,14 @@ const Main = () => {
         </span>
         <h1
           className={`${
-            attributes.light === "light" ? "text-black" : "text-white"
+            attributes?.light === "light" ? "text-black" : "text-white"
           } text-3xl sm:text-4xl  font-semibold`}
         >
           Fall Limited Edition <br /> Sneakers
         </h1>
         <p
           style={{
-            color: attributes.light === "light" ? "hsl(219, 9%, 45%)" : "white",
+            color: attributes?.light === "light" ? "hsl(219, 9%, 45%)" : "white",
           }}
         >
           These low-profile sneakers are your perfect casual wear companion.
@@ -59,16 +59,16 @@ const Main = () => {
           <div className="flex gap-4">
             <h3
               className={`${
-                attributes.light === "light" ? "text-black" : "text-white"
+                attributes?.light === "light" ? "text-black" : "text-white"
               } text-2xl sm:text-3xl  font-semibold`}
             >
               $125.00
             </h3>
             <span
               className={`${
-                attributes.light === "light" ? "text-white" : "text-black"
+                attributes?.light === "light" ? "text-white" : "text-black"
               }  font-bold ${
-                attributes.light === "light" ? "bg-black" : "bg-white"
+                attributes?.light === "light" ? "bg-black" : "bg-white"
               } flex items-center pr-3 pl-3 rounded`}
             >
               50%
@@ -77,7 +77,7 @@ const Main = () => {
           <h4
             style={{
               color:
-                attributes.light === "light"
+                attributes?.light === "light"
                   ? "hsl(219, 9%, 45%)"
                   : "hsl(0, 0%, 93.72549019607843%)",
             }}
@@ -94,7 +94,7 @@ const Main = () => {
             <FiMinus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
             <span
               className={`font-semibold ${
-                attributes.light === "light" ? "text-black" : "text-white"
+                attributes?.light === "light" ? "text-black" : "text-white"
               }`}
               style={{ fontSize: "1rem" }}
             >
@@ -104,7 +104,7 @@ const Main = () => {
           </div>
           <button
             className={`buy w-[90vw] sm:w-[20vw] h-[7vh] text-xl flex justify-center items-center gap-3 rounded-lg font-semibold ${
-              attributes.light === "light" ? "text-black" : "text-white"
+              attributes?.light === "light" ? "text-black" : "text-white"
             }`}
             style={{
               fontSize: "1.1rem",
@@ -112,7 +112,7 @@ const Main = () => {
           >
             <IoCartOutline
               className={`text-2xl ${
-                attributes.light === "light" ? "text-black" : "text-white"
+                attributes?.light === "light" ? "text-black" : "text-white"
               } cart`}
             />
             Add to cart

@@ -5,8 +5,8 @@ import product4 from '../images/image-product-4.jpg';
 
 
 export const products = [
-    {name : product1, altMessage : "product 1"},
-    {name : product2, altMessage : "product 2"},
-    {name : product3, altMessage : "product 3"},
-    {name : product4, altMessage : "product 4"}
+    {art : product1, altMessage : "product 1"},
+    {art : product2, altMessage : "product 2"},
+    {art : product3, altMessage : "product 3"},
+    {art : product4, altMessage : "product 4"}
 ]
