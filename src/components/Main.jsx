@@ -14,7 +14,7 @@ const Main = () => {
     <main
       className={`${
         attributes.light === "light" ? "bg-white" : "bg-black"
-      } relative h-fit w-screen pt-8 pb-8 flex flex-col sm:flex-row items-center justify-center sm:justify-center`}
+      } relative h-fit sm:h-[87vh] w-screen pt-8 pb-8 flex flex-col sm:flex-row items-center justify-center sm:justify-center`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
