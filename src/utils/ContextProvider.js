@@ -4,7 +4,8 @@ const stateContext = createContext();
 
 const initialState = {
     light : "light",
-    showCart : false
+    showCart : false,
+    current : 0
 }
 
 export const ContextProvider = ({children}) => {
@@ -18,7 +19,11 @@ export const ContextProvider = ({children}) => {
         setAttributes({...attributes, light : attributes.light === "light"? "dark" : "light"});
     }
 
-    return <stateContext.Provider value={{attributes, setAttributes, changeMode, showCart}}>
+    const bigSwitch = (i)=>{
+        setAttributes({...attributes, current: i});
+      }
+
+    return <stateContext.Provider value={{attributes, setAttributes, changeMode, showCart, bigSwitch}}>
         {children}
     </stateContext.Provider>
 }

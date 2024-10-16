@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
-import profile from '../images/image-avatar.png';
+import {profile, hamburger, iconClose} from '../images';
 
 const constants = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -27,7 +27,7 @@ const Nav = () => {
       >
         <section className="flex items-center gap-3">
           <img
-            src="/images/icon-menu.svg"
+            src={hamburger}
             alt="menu icon"
             className="sm:hidden w-[6vw] h-[2vh] cursor-pointer"
             onClick={changeHam}
@@ -49,7 +49,7 @@ const Nav = () => {
           } h-screen sm:h-full w-[60%] sm:w-[50vw] sm:flex gap-8 sm:gap-12 flex-col sm:flex-row absolute top-0 left-0 sm:relative z-40 pl-8 sm:pl-0 pt-6 sm:pt-0`}
         >
           <img
-            src="/images/icon-close.svg"
+            src={iconClose}
             alt="close icon"
             className="sm:hidden w-[20px] h-[20px] cursor-pointer mb-5"
             onClick={changeHam}
