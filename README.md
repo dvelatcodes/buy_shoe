@@ -21,8 +21,6 @@ users should be able to:
 
 - check out live site here [buy_shoe]()
 
-## My process
-
 ### Built with
 
 - Semantic HTML5 markup
