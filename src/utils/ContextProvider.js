@@ -5,7 +5,8 @@ const stateContext = createContext();
 const initialState = {
     light: "light",
     showCart: false,
-    current: 0
+    current: 0,
+    items: 1
 }
 
 export const ContextProvider = ({ children }) => {
@@ -41,7 +42,18 @@ export const ContextProvider = ({ children }) => {
         }
     }
 
-    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch }}>
+    const itemUp = ()=>{
+        setAttributes({...attributes, items: attributes.items + 1});
+    }
+
+    const itemDown = ()=>{
+        if  (attributes.items === 1)  {
+            setAttributes({...attributes, items: 1});
+        }
+        else{setAttributes({...attributes, items: attributes.items - 1});}
+    }
+
+    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch, itemUp, itemDown }}>
         {children}
     </stateContext.Provider>
 }
