@@ -32,13 +32,13 @@ const Nav = () => {
             className="sm:hidden w-[6vw] h-[2vh] cursor-pointer"
             onClick={changeHam}
           />
-          <h1
+          <span
             className={`${
               light === "light" ? "text-black" : "text-white"
             } text-3xl sm:text-4xl  font-semibold logo`}
           >
             sneakers
-          </h1>
+          </span>
         </section>
 
         <section

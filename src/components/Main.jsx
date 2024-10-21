@@ -77,13 +77,13 @@ const Main = () => {
         </p>
         <div className="flex justify-between sm:block">
           <div className="flex gap-4">
-            <h3
+            <h2
               className={`${
                 light === "light" ? "text-black" : "text-white"
               } text-2xl sm:text-3xl  font-semibold`}
             >
               $125.00
-            </h3>
+            </h2>
             <span
               className={`${
                 light === "light" ? "text-white" : "text-black"
@@ -94,7 +94,7 @@ const Main = () => {
               50%
             </span>
           </div>
-          <h4
+          <h3
             style={{
               color:
                 light === "light"
@@ -104,7 +104,7 @@ const Main = () => {
             className="font-semibold line-through sm:mt-2"
           >
             $250.00
-          </h4>
+          </h3>
         </div>
         <section className="flex flex-col sm:flex-row gap-5">
           <div
