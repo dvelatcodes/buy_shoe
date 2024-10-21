@@ -29,7 +29,7 @@ const Main = () => {
         light === "light" ? "bg-white" : "bg-black"
       } 
       ${
-        showHam === true ? "h-[48vh]" : "h-fit"
+        showHam === true ? "h-[41vh]" : "h-fit"
       } 
       ${
         showHam === true ? "overflow-y-hidden" : ""
