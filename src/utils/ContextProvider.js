@@ -6,7 +6,8 @@ const initialState = {
     light: "light",
     showCart: false,
     current: 0,
-    items: 1
+    items: 1,
+    cart: {}
 }
 
 export const ContextProvider = ({ children }) => {

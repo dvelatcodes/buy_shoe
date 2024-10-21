@@ -5,16 +5,29 @@ import { IoCartOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import Carousel from "./Carousel";
+import { products } from "../utils/constant";
+
 const Main = () => {
-  const { changeMode, attributes, itemUp, itemDown } = useStateContext();
-  const {light} = attributes;
-  const {items} = attributes
+  const { changeMode, attributes, itemUp, itemDown, setAttributes } = useStateContext();
+  const {light, items, current} = attributes;
+
+  // add to cart function
+  const addToCart = ()=>{
+    const pic = products[current]
+    const data = {
+     pic,
+     content: "Fall Limited Edition Sneakers",
+     priceCalculation: `$125.00 x ${items}`,
+     price: `$${125 * items}.00`
+    }
+    setAttributes({...attributes, cart: data});
+  }
 
   return (
     <main
       className={`${
         light === "light" ? "bg-white" : "bg-black"
-      } relative h-fit sm:h-[87vh] w-screen pt-8 sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
+      } relative h-fit sm:h-[87vh] w-screen sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
@@ -109,6 +122,7 @@ const Main = () => {
             style={{
               fontSize: "1.1rem",
             }}
+            onClick={addToCart}
           >
             <IoCartOutline
               className={`text-2xl ${
