@@ -14,8 +14,8 @@ users should be able to:
 - View the cart and remove items from it
 
 ## Screenshots
-
-
+![alt text](public/design/desktop-design.jpg)
+![alt text](public/design/mobile-design.jpg)
 
 ## Hosted on github domain
 
