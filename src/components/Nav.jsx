@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
 import { profile, hamburger, iconClose } from "../images";
+import { ImBin } from "react-icons/im";
 
 const constants = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -17,8 +18,8 @@ const Nav = () => {
     setShowCart((prev) => (prev === false ? true : false));
   };
 
-  const { attributes } = useStateContext();
-  const { light, cart } = attributes;
+  const { attributes, deleteCart } = useStateContext();
+  const { light, cart, items } = attributes;
 
   return (
     <header
@@ -69,12 +70,25 @@ const Nav = () => {
           ))}
         </section>
         <section className="flex items-center">
-          <IoCartOutline
-            className={`mr-4 sm:mr-12 text-4xl cursor-pointer ${
-              light === "light" ? "text-black" : "text-white"
-            }`}
-            onClick={seeCart}
-          />
+          <div className="relative">
+            {Object.keys(cart).length !== 0 && (
+              <span
+                className="w-[3.5vw] lg:w-[2.5vw] xl:w-[2vw] text-white absolute -top-1 right-0 left-0 m-auto font-semibold flex justify-center rounded-lg"
+                style={{
+                  backgroundColor: "hsl(26, 100%, 55%)",
+                  fontSize: "0.7rem",
+                }}
+              >
+                {items}
+              </span>
+            )}
+            <IoCartOutline
+              className={`mr-4 sm:mr-12 text-4xl cursor-pointer ${
+                light === "light" ? "text-black" : "text-white"
+              }`}
+              onClick={seeCart}
+            />
+          </div>
           <img
             src={profile}
             alt="profile"
@@ -90,18 +104,64 @@ const Nav = () => {
           <div
             className={`${
               light === "light" ? "bg-white" : "bg-black"
-            } w-[95vw] h-[35vh] absolute top-32 left-0 right-0 m-auto z-30 rounded-xl pt-4`}
+            } w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-[35vh] sm:h-fit  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
           >
-            <h1 className={`pl-8 pb-4 font-semibold ${
-              light === "light" ? "text-black" : "text-white"
-            }`}>Cart</h1>
+            <h1
+              className={`pl-8 sm:pl-4 pb-4 font-semibold ${
+                light === "light" ? "text-black" : "text-white"
+              }`}
+            >
+              Cart
+            </h1>
             <hr />
             {Object.keys(cart).length === 0 ? (
-              <h2 className={`m-auto w-fit mt-20 font-semibold ${
-                light === "light" ? "text-slate-500" : "text-white"
-              }`}>Your cart is empty.</h2>
+              <h2
+                className={`m-auto w-fit mt-20 font-semibold ${
+                  light === "light" ? "text-slate-500" : "text-white"
+                }`}
+              >
+                Your cart is empty.
+              </h2>
             ) : (
-              <div></div>
+              <div className="pl-8 sm:pl-4">
+                <div className="mt-6 mb-6 flex items-center gap-x-5 sm:gap-x-2 xl:gap-x-4">
+                  <img
+                    src={cart.pic.art}
+                    alt={cart.pic.altMessage}
+                    className="w-[14vw] md:w-[10vw] xl:w-[7vw] h-[7vh] rounded-md"
+                  />
+                  <h2
+                    className={`md:w-[21vw] xl:w-[19vw] ${
+                      light === "light" ? "text-slate-500" : "text-white"
+                    }`}
+                  >
+                    {cart.content} <br /> {cart.priceCalculation}{" "}
+                    <span
+                      className={`font-bold ${
+                        light === "light" ? "text-black" : "text-white"
+                      }`}
+                    >
+                      {cart.price}
+                    </span>
+                  </h2>
+                  <ImBin
+                    className={`text-xl cursor-pointer ${
+                      light === "light" ? "text-slate-500" : "text-white"
+                    }`}
+                    onClick={deleteCart}
+                  />
+                </div>
+                <button
+                  className={`buy w-[80vw] sm:w-[90%] h-[7vh] sm:mb-5 text-xl flex justify-center items-center gap-3 rounded-lg font-semibold ${
+                    light === "light" ? "text-black" : "text-white"
+                  }`}
+                  style={{
+                    fontSize: "1.1rem",
+                  }}
+                >
+                  Checkout
+                </button>
+              </div>
             )}
           </div>
         )}

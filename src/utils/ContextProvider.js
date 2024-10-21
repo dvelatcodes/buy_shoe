@@ -29,7 +29,7 @@ export const ContextProvider = ({ children }) => {
         if (attributes.current === 3) {
             setAttributes({ ...attributes, current: 0 });
         }
-        else{
+        else {
             setAttributes({ ...attributes, current: attributes.current + 1 });
         }
     }
@@ -38,23 +38,27 @@ export const ContextProvider = ({ children }) => {
         if (attributes.current === 0) {
             setAttributes({ ...attributes, current: 3 });
         }
-        else{
+        else {
             setAttributes({ ...attributes, current: attributes.current - 1 });
         }
     }
 
-    const itemUp = ()=>{
-        setAttributes({...attributes, items: attributes.items + 1});
+    const itemUp = () => {
+        setAttributes({ ...attributes, items: attributes.items + 1 });
     }
 
-    const itemDown = ()=>{
-        if  (attributes.items === 1)  {
-            setAttributes({...attributes, items: 1});
+    const itemDown = () => {
+        if (attributes.items === 1) {
+            setAttributes({ ...attributes, items: 1 });
         }
-        else{setAttributes({...attributes, items: attributes.items - 1});}
+        else { setAttributes({ ...attributes, items: attributes.items - 1 }); }
     }
 
-    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch, itemUp, itemDown }}>
+    const deleteCart = () => {
+        setAttributes({ ...attributes, cart: {} })
+    }
+
+    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch, itemUp, itemDown, deleteCart }}>
         {children}
     </stateContext.Provider>
 }
