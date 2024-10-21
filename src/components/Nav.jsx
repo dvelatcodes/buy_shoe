@@ -104,7 +104,14 @@ const Nav = () => {
           <div
             className={`${
               light === "light" ? "bg-white" : "bg-black"
-            } w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-[35vh] sm:h-fit  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
+            }
+            ${
+              light === "light" ? "" : "border"
+            }
+            ${
+              light === "light" ? "" : "border-orange-400"
+            }
+            w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-[35vh] sm:h-fit  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
           >
             <h1
               className={`pl-8 sm:pl-4 pb-4 font-semibold ${
