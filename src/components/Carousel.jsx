@@ -15,7 +15,7 @@ const Carousel = () => {
         <img
           src={products[current].art}
           alt={products[current].altMessage}
-          className="w-full h-[50vh] rounded-2xl"
+          className="w-full h-[50vh] sm:rounded-2xl"
         />
         <GoChevronRight onClick={addSwitch} className="sm:hidden absolute top-0 bottom-0 right-6 m-auto text-3xl font-black bg-white hover:bg-slate-100 rounded-full h-fit w-fit cursor-pointer p-2" />
       </div>

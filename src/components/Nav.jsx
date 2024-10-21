@@ -81,26 +81,30 @@ const Nav = () => {
             className="w-[40px] sm:w-[65px] h-[40px] sm:h-[60px] cursor-pointer profile"
           />
         </section>
-        {showCart && (
-          <div
-            className={`${
-              light === "light" ? "bg-white" : "bg-black"
-            } w-[90vw] h-[20vh] absolute top-36 left-0 right-0 m-auto z-30`}
-          >
-            <h1>Cart</h1>
-            <hr />
-            {Object.keys(cart).length === 0 ? (
-              <h2>Your cart is empty</h2>
-            ) : (
-              <div></div>
-            )}
-          </div>
-        )}
         <div
           className={`h-screen w-[40%] bg-black opacity-30 z-40  absolute right-0 top-0 ${
             showHam === false ? "hidden" : "block"
           } sm:hidden`}
         ></div>
+        {showCart && (
+          <div
+            className={`${
+              light === "light" ? "bg-white" : "bg-black"
+            } w-[95vw] h-[35vh] absolute top-32 left-0 right-0 m-auto z-30 rounded-xl pt-4`}
+          >
+            <h1 className={`pl-8 pb-4 font-semibold ${
+              light === "light" ? "text-black" : "text-white"
+            }`}>Cart</h1>
+            <hr />
+            {Object.keys(cart).length === 0 ? (
+              <h2 className={`m-auto w-fit mt-20 font-semibold ${
+                light === "light" ? "text-slate-500" : "text-white"
+              }`}>Your cart is empty.</h2>
+            ) : (
+              <div></div>
+            )}
+          </div>
+        )}
       </nav>
     </header>
   );
