@@ -109,7 +109,7 @@ const Nav = () => {
             w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-[35vh] sm:h-fit  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
           >
             <h1
-              className={`pl-8 sm:pl-4 pb-4 font-semibold ${
+              className={`pl-2 sm:pl-4 pb-4 font-semibold ${
                 light === "light" ? "text-black" : "text-white"
               }`}
             >
@@ -125,7 +125,7 @@ const Nav = () => {
                 Your cart is empty.
               </h2>
             ) : (
-              <div className="pl-8 sm:pl-4">
+              <div className="pl-2 sm:pl-4">
                 <div className="mt-6 mb-6 flex items-center gap-x-5 sm:gap-x-2 xl:gap-x-4">
                   <img
                     src={cart.pic.art}
@@ -133,7 +133,7 @@ const Nav = () => {
                     className="w-[14vw] md:w-[10vw] xl:w-[7vw] h-[7vh] rounded-md"
                   />
                   <h2
-                    className={`md:w-[21vw] xl:w-[19vw] ${
+                    className={`w-[50vw] sm:w-[30vw] md:w-[21vw] xl:w-[19vw] ${
                       light === "light" ? "text-slate-500" : "text-white"
                     }`}
                   >
