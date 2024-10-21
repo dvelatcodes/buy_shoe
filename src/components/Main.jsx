@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiFillSun, AiOutlineSun } from "react-icons/ai";
 import { useStateContext } from "../utils/ContextProvider";
 import { IoCartOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import Carousel from "./Carousel";
-// import { products } from '../utils/constant';
 const Main = () => {
-  const { changeMode, attributes } = useStateContext();
+  const { changeMode, attributes, itemUp, itemDown } = useStateContext();
   const {light} = attributes;
+  const {items} = attributes
 
-  const [numOfItemsSelected, setNumOfItemsSelected] = useState(1);
   return (
     <main
       className={`${
@@ -92,16 +91,16 @@ const Main = () => {
             className="w-[90vw] sm:w-[8vw] h-[7vh] flex items-center justify-around rounded-lg"
             style={{ backgroundColor: "hsl(220, 14%, 75%)" }}
           >
-            <FiMinus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
+            <FiMinus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}} onClick={itemDown}/>
             <span
               className={`font-semibold ${
                 light === "light" ? "text-black" : "text-white"
               }`}
               style={{ fontSize: "1rem" }}
             >
-              {numOfItemsSelected}
+              {items}
             </span>
-            <GoPlus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}}/>
+            <GoPlus className="text-xl cursor-pointer" style={{color: 'hsl(26, 100%, 55%)'}} onClick={itemUp}/>
           </div>
           <button
             className={`buy w-[90vw] sm:w-[20vw] h-[7vh] text-xl flex justify-center items-center gap-3 rounded-lg font-semibold ${

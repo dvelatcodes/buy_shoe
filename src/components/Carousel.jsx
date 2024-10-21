@@ -11,13 +11,13 @@ const Carousel = () => {
   return (
     <div className="w-screen sm:w-[45vw] lg:w-[35vw] xl:w-[30vw]">
       <div className="w-full relative">
-        <GoChevronLeft onClick={minusSwitch} className="absolute top-0 bottom-0 left-6 m-auto text-3xl font-black bg-white hover:bg-slate-100 rounded-full h-fit w-fit cursor-pointer p-2" />
+        <GoChevronLeft onClick={minusSwitch} className="sm:hidden absolute top-0 bottom-0 left-6 m-auto text-3xl font-black bg-white hover:bg-slate-100 rounded-full h-fit w-fit cursor-pointer p-2" />
         <img
           src={products[current].art}
           alt={products[current].altMessage}
           className="w-full h-[50vh] rounded-2xl"
         />
-        <GoChevronRight onClick={addSwitch} className="absolute top-0 bottom-0 right-6 m-auto text-3xl font-black bg-white hover:bg-slate-100 rounded-full h-fit w-fit cursor-pointer p-2" />
+        <GoChevronRight onClick={addSwitch} className="sm:hidden absolute top-0 bottom-0 right-6 m-auto text-3xl font-black bg-white hover:bg-slate-100 rounded-full h-fit w-fit cursor-pointer p-2" />
       </div>
       <div className="hidden w-full sm:flex justify-between mt-7 ">
         {products.map((pic, index) => (
