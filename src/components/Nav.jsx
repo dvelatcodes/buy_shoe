@@ -116,7 +116,7 @@ const Nav = () => {
             <hr />
             {Object.keys(cart).length === 0 ? (
               <h2
-                className={`m-auto w-fit mt-20 font-semibold ${
+                className={`m-auto w-fit mt-20 sm:mb-20 font-semibold ${
                   light === "light" ? "text-slate-500" : "text-white"
                 }`}
               >
