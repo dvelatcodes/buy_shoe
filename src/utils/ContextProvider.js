@@ -5,6 +5,7 @@ const stateContext = createContext();
 const initialState = {
     light: "light",
     showCart: false,
+    showHam: false,
     current: 0,
     items: 1,
     cart: {}
@@ -16,6 +17,10 @@ export const ContextProvider = ({ children }) => {
     const showCart = () => {
         setAttributes({ ...attributes, showCart: false ? true : false })
     }
+
+    const changeHam = () => {
+        setAttributes({...attributes, showHam: attributes.showHam === false? true : false});
+    };
 
     const changeMode = () => {
         setAttributes({ ...attributes, light: attributes.light === "light" ? "dark" : "light" });
@@ -58,7 +63,7 @@ export const ContextProvider = ({ children }) => {
         setAttributes({ ...attributes, cart: {} })
     }
 
-    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch, itemUp, itemDown, deleteCart }}>
+    return <stateContext.Provider value={{ attributes, setAttributes, changeMode, showCart, bigSwitch, addSwitch, minusSwitch, itemUp, itemDown, deleteCart, changeHam }}>
         {children}
     </stateContext.Provider>
 }

@@ -7,19 +7,14 @@ import { ImBin } from "react-icons/im";
 const constants = ["Collections", "Men", "Women", "About", "Contact"];
 
 const Nav = () => {
-  const [showHam, setShowHam] = useState(false);
   const [showCart, setShowCart] = useState(false);
-
-  const changeHam = () => {
-    setShowHam((prev) => (prev === false ? true : false));
-  };
 
   const seeCart = () => {
     setShowCart((prev) => (prev === false ? true : false));
   };
 
-  const { attributes, deleteCart } = useStateContext();
-  const { light, cart, items } = attributes;
+  const { attributes, deleteCart, changeHam } = useStateContext();
+  const { light, cart, items, showHam } = attributes;
 
   return (
     <header

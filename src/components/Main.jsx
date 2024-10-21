@@ -9,7 +9,7 @@ import { products } from "../utils/constant";
 
 const Main = () => {
   const { changeMode, attributes, itemUp, itemDown, setAttributes } = useStateContext();
-  const {light, items, current} = attributes;
+  const {light, items, current, showHam} = attributes;
 
   // add to cart function
   const addToCart = ()=>{
@@ -27,7 +27,14 @@ const Main = () => {
     <main
       className={`${
         light === "light" ? "bg-white" : "bg-black"
-      } relative h-fit sm:h-[87vh] w-screen sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
+      } 
+      ${
+        showHam === true ? "h-[48vh]" : "h-fit"
+      } 
+      ${
+        showHam === true ? "overflow-y-hidden" : ""
+      } 
+      relative h-fit sm:h-[87vh] w-screen sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
