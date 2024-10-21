@@ -2,45 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
 }
 
-a {
-    color: hsl(220, 13%, 13%);
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
 }
 
-a:hover  {
-    border-bottom-color: hsl(26, 100%, 55%);
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(26, 100%, 55%);
+  border-radius: 10px;
+}
+
+a {
+  color: hsl(220, 13%, 13%);
+}
+
+a:hover {
+  border-bottom-color: hsl(26, 100%, 55%);
 }
 
 .profile:hover {
-    border: 2px solid hsl(26, 100%, 55%);
-    border-radius: 50%;
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
 }
 
 .buy {
-    background-color: hsl(26, 100%, 55%);
+  background-color: hsl(26, 100%, 55%);
 }
 
 .buy:hover {
-    background-color: hsl(25, 100%, 94%);
-    color: black;
+  background-color: hsl(25, 100%, 94%);
+  color: black;
 }
 
 .buy:hover .cart {
-    color: black;
+  color: black;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
 
 @media screen and (max-width: 640px) {
-    .seeCart {
-        left: 0;
-    }
+  .seeCart {
+    left: 0;
+  }
 }
-
