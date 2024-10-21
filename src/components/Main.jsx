@@ -47,7 +47,7 @@ const Main = () => {
         )}
       </div>
       <Carousel/>
-      <section className="w-screen sm:w-[40vw] flex flex-col gap-6 pl-6 pr-6">
+      <section className="w-screen sm:w-[40vw] flex flex-col gap-6 pl-4 sm:pl-6 pr-6">
         <span
           className="uppercase font-semibold"
           style={{

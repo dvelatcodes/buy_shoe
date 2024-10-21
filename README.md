@@ -19,7 +19,7 @@ users should be able to:
 
 ## Hosted on github domain
 
-- check out live site here [buy_shoe]()
+- check out live site here [buy_shoe](https://buy-shoe.vercel.app/)
 
 ### Built with
 
