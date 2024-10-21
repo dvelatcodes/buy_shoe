@@ -34,7 +34,7 @@ const Main = () => {
       ${
         showHam === true ? "overflow-y-hidden" : ""
       } 
-      relative h-fit sm:h-[87vh] w-screen sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
+      relative sm:h-[87vh] w-screen sm:pt-24 pb-4 flex flex-col sm:flex-row justify-center sm:justify-center gap-y-8 sm:gap-y-0 sm:gap-x-2 lg:gap-x-8 xl:gap-x-20`}
     >
       <div
         className="mode w-fit h-fit cursor-pointer absolute right-10 sm:right-28 top-16 z-50"
