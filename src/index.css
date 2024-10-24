@@ -62,6 +62,10 @@ main {
   overflow-x: hidden;
 }
 
+.lightBox{
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
 @media screen and (max-width: 640px) {
   .seeCart {
     left: 0;
