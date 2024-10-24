@@ -106,7 +106,7 @@ const Nav = () => {
             ${
               light === "light" ? "" : "border-orange-400"
             }
-            w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-[35vh] sm:h-fit  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
+            w-[95vw] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto sm:h-fit pb-10 sm:pb-0  absolute top-32 right-0 m-auto sm:m-0 z-30 rounded-xl pt-4 sm:shadow-2xl seeCart`}
           >
             <h1
               className={`pl-2 sm:pl-4 pb-4 font-semibold ${
@@ -118,7 +118,7 @@ const Nav = () => {
             <hr />
             {Object.keys(cart).length === 0 ? (
               <h2
-                className={`m-auto w-fit mt-20 sm:mb-20 font-semibold ${
+                className={`m-auto w-fit mt-10 sm:mb-12 font-semibold ${
                   light === "light" ? "text-slate-500" : "text-white"
                 }`}
               >
